@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content ="width=device-width, initial-scale=1, user-scalable=yes" />
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="../img/logo.png">
+  <title>
+    Nathan Bhat
+  </title>
+
+</head>
+
+<body>
+  <div>
+    <header>
+      <div style="float:left;">
+        <a href="../index.html"><img id="logobutton" src="../img/logo.png" alt="Logo"></a>
+      </div>
+      <div style="float:left;padding-top:20px;padding-left:20px;">
+        <p>contact@nathanbhat.com</p>
+      </div>
+      <div>
+        <nav>
+          <a href="about.html" class="head-link">About me</a>
+          <a href="demo.html" class="head-link">Demos</a>
+          <a href="../index.html" class="head-link">Home</a>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <div id="page-wrap">
+
+    <div class="page-element" id="intro">
+      <div class="left-dominant">
+        <h1>Nathan Bhat's Blog for the course: DH2650 Computer Game Design</br></br></h1>
+    <h2>2019-10-31</h2>
+        <p>Yesterday we had a long meeting where each group member pitched many different simple concepts that they had prepared before and we decided on one concept to have as our main idea. The concept we went for is a time based 2D platformer game. The player starts off in the game, and can perform different basic actions, then the player can hit a "reset" button that resets the game. When the player resets, we start over from where we started before, but there is a copy of the player doing everything that was done before the reset. The player can reset many times (an exact limit is yet to be decided), causing there to be a bunch of copies of the player running through their different timelines, a la Super Meat Boy when you complete a level and see all of your attempts play out at once. This mechanic is not only visual though, one "run" could involve the player running up and jumping on some spikes, then reseting and waiting until the previous run jumps on the spikes and then using the corpse as a platform to get past the obstacle. A similar concept is the game "Life Goes On" which is on Steam, however in that game time does not reset, there is just a new character that spawns and can use the corpses of previous attempts in various ways to solve the puzzles.
+        </br></br>
+        The platform we decided on is PC, and we will use unity to create the game. We have already started working on a basic prototype to see if the mechanic works, both from a technical perspective and a gameplay perspective. We believe this core mechanic will be feasible to create, as we do have experienced devlepors (myself narcissistically included), however if it is fun or not is yet to be seen. We believe it could be fun, but to be sure we are creating a prototype ASAP. One of the challenges we immediately see is Asset creation. None of us are artists (though some of us have some experience in having to make art for games despite lack of skill or knowledge) which means whatever aesthetic we decide on needs to be very simple and easy to use.
+        </br></br>
+        We have many new ideas brewing, and written down in some shared documents, so you'll have to check back to see what we decide on next!
+        </br></br>
+        </p>
+    <h2>2019-11-03</h2>
+        <p>Today I added the base movement for the character. I reused some code from an earlier project I created a couple years ago, with some modifications to make it fit our game more. In this solution I created a method for reading input that was designed for Unity's FixedUpdate (unity natively reads input on the Update call). Movement included moving right and left, jumping and deceleration to make the character feel a little more natural (a little slidy always feels a little better).
+        </br></br>
+        I also added a technique that is not super well known but is present in a lot of the best platformer games, where if the player walks off the side of a platform they will still be able to jump for a few frames after this, despite being in the air. This is because players are often not the best at timing a jump perfectly with reaching the edge of a platform, so doing this improves the experience but is rather subtle.
+        </br></br>
+        </p>
+    <h2>2019-11-05</h2>
+        <p>Today I added a system for Switchables and Switches. A switch is like a button or lever or something else and a Switchable is like a door or laser or something that can switch on and off. My basic implementation let me create a button that when the player or a clone stands on a door will open, and if the player leaves the button the door will close.
+        </br></br>
+        I have an idea for a weight scale type switch, where there is an imbalanced scale where you have to use clones to balance it and when that happens a door will open. I think this could be an interesting puzzle.
+        </br></br>
+        </p>
+    <h2>2019-11-05</h2>
+        <p>I fixed a small bug I found relating to the door so that now you can have a door that is default open and when a button presses the door closes. This could lead to some interesting designs like where you have to close doors to protect the player from turret fire.
+        </br></br>
+        </p>
+    <h2>2019-11-08</h2>
+        <p>Today I created a system for turning into a solid that the player and clones can jump on. We have ideas for using this to create stairs using clones and other things. At the moment clones when solid freeze in their position, but I think it might be fun to make a solid clone have phsyics, so the player can push solid clones around etc.
+        </br></br>
+        </p>
+    <h2>2019-11-09</h2>
+        <p>Since our game is intended to be a free roaming metroidvania style game and our core mechanic is resetting time to t0, we needed some sort of checkpoint system. Because of this I thought of the different requirements each checkpoint would need, such as the ability to clear the clones spawning from a checkpoint and stuff like that. I then wrote the code for this system which took longer than expected, but in the end it worked rather nicely.
+        </br></br>
+        Our design idea for this is that each "room" is a level/puzzle and at the end/beginning of each room there should be a checkpoint.
+        </br></br>
+        </p>
+    <h2>2019-11-10</h2>
+        <p>I wasn't intending to work on game design today but it is just too fun to resist. We wanted a method for killing our clones and I wound up writing some code for shooting clones. At the moment shooting solid clones does not remove them, and I'm not sure how we'll want that later on. It all works but I think we need to do some design choices to slow our game down a little (like character movement speed, and maybe a little charge animation for the laser). Right now it's very fast and twitchy which does not feel 10/10. I think some simple modifications will add a bunch to the game feel.
+        </br></br>
+        </p>
+    <h2>2019-11-11</h2>
+        <p>Today we had a meeting where we discussed stuff like the project timeline, what we want for the first demo on Friday, and design ideas for how we want to evolve our game. We have a pretty good demo down for our project already (though it does not have a level), and our mechanics are working as intended. I think we'll be able to make a really cool game and I kinda wish we had more time to go deeper into our game.
+        </br></br>
+        </p>
+    <h2>2019-11-13</h2>
+        <p>Today I created a system for laser doors (doors made out of laser that will kill the player) and for turrets that shoot lasers. I set up a system for the lasers to be line renderers, however we might replace this at a later point. I have a feeling that after this week we will mainly be improving the graphics, tweaking small values and creating levels, which is rather good given the length of this project.
+        </br></br></p>
+    <h2>2019-11-14</h2>
+        <p>Day before our first demo in class. Tom has created a bunch of graphics that should be put into the game. I've been working on fixing bugs and creating a level to show off at the demo as well as adding Tom's graphics to the game. It's really starting to shape up and I think our demo will be pretty cool!
+        </br></br></p>
+    <h2>2019-11-15</h2>
+        <p>Today was our demo! We came in early in the morning to jam together and work out all of the kinks and polish the game up a bit for our demo. This jam session was incredibly valuable and I would like to do more of them in the future. During this jam session I added more of Tom's graphics to the game and helped Tom when fixing a game breaking bug.
+        </br></br>
+        We also ran our game in 4k resolution which was pretty fun (although somewhat pointless given the pixelated artstyle of our game). I am very much looking forward to the future of our project as we have many interesting ideas for what to do next and polish what we already have.
+        </br></br></p>
+    <h2>2019-11-19</h2>
+        <p> Today I worked with making the movement feel a bit better. The main issues here was that it was difficult to do precision movement. The scale also felt weird, the character being rather small but being able to jump extremely high. What we did was edit movement variables and add a bit of acceleration so the player doesn't start at max speed as soon as a direction is pressed. We also zoomed in the camera so that the game would feel a bit more up close and personal. I also edited the collider of the player so it fits more with the sprite.
+        </br></br></p>
+    <h2>2019-11-20</h2>
+        <p> I realized that the switch system was a bit flawed (switches didn't reset when you reset time). I also thought it might be interesting for level design if switches could take several switchables (so one switch might open one door and close another). I implemented the code to fix all of this. I haven't had a ton of time to work on this course this week, but I hope to start making bigger progress again this weekend.
+        </br></br></p>
+    <h2>2019-11-22</h2>
+        <p> I implemented the balance switch system today. This system is a puzzle where you have to create balance in a weight scale to activate a switchable (such as a laser or a door). This system also allows for a branching structure, so one balance splitter can split off into another balance splitter and you have to solve the whole thing to activate the switchable.
+        </br></br></p>
+    <h2>2019-11-26</h2>
+        <p> I improved the solidying system so that the clone would slow down (as if time was slowing down) I also made sure the music slowed down to a stop. This makes it more clear when a clone or player solidifies.
+        </br></br>
+        I realize I might not have mentioned the music before. The music in the game was composed by me and has a slow synthy feel to it that I thought went well with our sci-fi theme. I made the music in my spare time as sort of an extra thing for this project (originally we planned on finding music online, but I'm happy we made our own).
+        </br></br>
+        I also improved dying so you now have to press reset to go back to the checkpoint, which feels nice and natural in our game. More than this I fixed some minor bugs that we found
+
+        </br></br></p>
+    <h2>2019-11-27</h2>
+        <p> Today was mainly about getting the beautiful graphics that Tom Axblad made for our game into the project (setting up animations etc). I also fixed some errors and added xbox controller support for our game.
+        </br></br></p>
+    <h2>2019-11-28</h2>
+        <p> I worked a bit with the checkpoint today and helped another group member with learning unity. I also worked on improving the movement in the game so it felt more smooth.
+        </br></br></p>
+    <h2>2019-12-02</h2>
+        <p> Today I added a lot of the vfx stuff like working on some camera stuff as well as the background. I also worked on some of the animation stuff (not the artistic side, but the technical of putting it into unity).
+        </br></br></p>
+    <h2>2019-12-03</h2>
+        <p> Today I created a level for the game using the balance platforms mechanic. It works pretty well, and I hope the others will find it fun! I try to teach the mechanic and show off how it works in the level.
+        </br></br></p>
+    <h2>2019-12-04</h2>
+        <p> Today I created an intro level that shows off our most basic mechanics. I also worked on a way to switch between the overground and underground backgrounds. Today was a lot of fixing minor stuff and polishing.
+        </br></br></p>
+    <h2>2019-12-05</h2>
+        <p> I put all 4 of our levels (two by me, and two by Alvin Häger) into one big scene with a little hub area to connect all the levels. I also fixed some controller bugs today and decorated the world. It has been a pretty rough week this week, I've been working 14 hours a day (mostly on this project).
+        </br></br></p>
+    <h2>2019-12-06</h2>
+        <p> Today I did some minor bug fixing and stuff, not much to say really.
+        </br></br></p>
+    <h2>2019-12-08</h2>
+        <p> Today I set up the controller to work with my SNES controller. I prepared the game for our demo tomorrow, I'm super excited to show it and it will be awesome to see how people play with the game!
+        </br></br></p>
+    <h2>2019-12-09</h2>
+        <p> We had our demo today and it went really well, I got many compliments afterwards about how cool people thought our game was. We only got to show off a small portion of the game for our demo, but we got to stay afterwards and show our big map to those who were interested.
+        </br></br>
+        This course has almost been too fun (that it made me not focus on other courses). I have thrown my heart and soul into this game and I think I must have spent well over 100 hours on this game. I did the bulk of the programming and bug fixing for this game (except for the main time reset mechanic, although I did do a lot of bug fixing in there as well). I implemented the movemnt and most of the player's abilities and the mechanics in the world (with the exception of the geysers). It's been crazy but I've had a wonderful team to work with and we were all really passionate about the game that we made. It's been so fun, and I hope you can try out our game and website <a href="https://luddz.github.io/timegame/#/">here.</a>
+        </br></br></p>
+<h1>Thanks for Reading!</h1>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
