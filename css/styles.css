@@ -1,0 +1,519 @@
+/*
+* CSS Reset.
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+a {
+	color:white;
+}
+
+@media all and (min-width: 1320px) {
+
+	/*
+	* General.
+	*/
+	body {
+	  background-color: rgb(0, 0, 0);
+	  font-family:'Arial';
+	  color: rgb(255, 255, 255);
+	}
+
+	h1 {
+	  font-size: 64px;
+	}
+
+	h2 {
+	  font-size: 48px;
+	}
+
+	p {
+	  font-size: 24px;
+	}
+
+	ul {
+	  font-size: 36px;
+	  padding-left: 40px;
+	  list-style-type: disc;
+	}
+
+	li {
+	  font-size: 24px;
+	}
+
+	/*
+	* Header and Footer content.
+	*/
+	header {
+	  max-width: 1200px;
+	  left: 50%;
+	  margin-left: -600px;
+	  display:block;
+		background-color:rgb(0,0,0);
+		width:100%;
+		position:fixed;
+		z-index:10;
+	}
+
+	footer {
+	  max-width: 1200px;
+	  padding-top: 200px;
+	  margin: 0 auto;
+	  display:block;
+		width:100%;
+		position: relative;
+		z-index:10;
+	}
+
+	#logobutton {
+	  width: 64px;
+	}
+
+	#logobuttonft {
+	  width: 256px;
+	}
+
+	.head-link {
+		display: block;
+		padding-top: 20px;
+		height: 100%;
+		font-size: 24px;
+		float: right;
+		padding-right: 20px;
+		font-style: normal;
+		color: white;
+	}
+
+	/*
+	* Page content.
+	*/
+	#page-wrap {
+	  width: 100%;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	  overflow-x: hidden;
+	}
+
+	.left-dominant {
+	  width: 65%;
+	  float: left;
+	}
+
+	.right-dominant {
+	  width: 70%;
+	  float: right;
+	}
+
+	.left-equal {
+	  width: 40%;
+	  float: left;
+	}
+
+	.right-equal {
+	  width: 55%;
+	  float: right;
+	}
+
+	.left-submissive {
+	  width: 25%;
+	  float: left;
+	}
+
+	.right-submissive {
+	  width: 30%;
+	  float: right;
+	}
+
+	.page-element {
+	  padding-top: 100px;
+	  padding-bottom: 200px;
+	}
+
+	#intro {
+		margin-bottom: 200px;
+	}
+
+	#me {
+	  margin-top: 0px;
+	}
+
+	#code-descript {
+	  position: relative;
+	  padding-top: 64px;
+	}
+
+	#design {
+	  padding-top: 20%;
+	}
+
+	#video {
+	  width: 640px;
+	}
+
+	#port-video {
+		padding-top: 100px;
+		padding-bottom: 0px;
+	}
+
+	.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+	}
+	.videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+}
+
+@media all and (max-width: 1319px) and (min-width: 900px) {
+
+	/*
+	* General.
+	*/
+	body {
+	  background-color: rgb(0, 0, 0);
+	  font-family:'Arial';
+	  color: rgb(255, 255, 255);
+	}
+
+	h1 {
+	  font-size: 48px;
+	}
+
+	h2 {
+	  font-size: 32px;
+	}
+
+	p {
+	  font-size: 18px;
+	}
+
+	ul {
+	  font-size: 24px;
+	  padding-left: 40px;
+	  list-style-type: disc;
+	}
+
+	li {
+	  font-size: 18px;
+	}
+
+	/*
+	* Header and Footer content.
+	*/
+	header {
+	  display:block;
+		background-color:rgb(0,0,0);
+		width:100%;
+		position:fixed;
+		z-index:10;
+	}
+
+	footer {
+	  padding-top: 50px;
+	  display:block;
+		width:80%;
+		z-index:10;
+	}
+
+	#logobutton {
+	  width: 48px;
+	}
+
+	#logobuttonft {
+	  width: 128px;
+	}
+
+	.head-link {
+		display: block;
+		padding-top: 20px;
+		height: 100%;
+		font-size: 24px;
+		float: right;
+		padding-right: 20px;
+		font-style: normal;
+		color: white;
+	}
+
+	/*
+	* Page content.
+	*/
+	#page-wrap {
+	  width: 100%;
+	  margin: 0 auto;
+	  overflow-x: hidden;
+	}
+
+	.left-dominant {
+	  width: 65%;
+	  float: left;
+	}
+
+	.right-dominant {
+	  width: 70%;
+	  float: right;
+	}
+
+	.left-equal {
+	  width: 80%;
+		float: left;
+	}
+
+	.right-equal {
+	  width: 80%;
+		float: left;
+	}
+
+	.left-submissive {
+	  width: 25%;
+	  float: left;
+	}
+
+	.right-submissive {
+	  width: 30%;
+	  float: right;
+	}
+
+	.page-element {
+	  padding-top: 100px;
+	  padding-bottom: 100px;
+	}
+
+	#intro {
+		margin-bottom: 200px;
+	}
+
+	#me {
+	  margin-top: -50px;
+	  padding-right: 30px;
+	}
+
+	#code-descript {
+	  /*position: relative;
+	  padding-top: 48px;*/
+	}
+
+	#skills {
+		padding-bottom: 200px;
+	}
+
+	#design {
+	  padding-top: 20%;
+	}
+
+	#video {
+	  width: 640px;
+	}
+
+	#port-video {
+		padding-top: 100px;
+		padding-bottom: 0px;
+	}
+
+	.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+	}
+	.videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+}
+
+@media all and (max-width: 899px) {
+
+	/*
+	* General.
+	*/
+	body {
+	  background-color: rgb(0, 0, 0);
+	  font-family:'Arial';
+	  color: rgb(255, 255, 255);
+	}
+
+	h1 {
+	  font-size: 32px;
+	}
+
+	h2 {
+	  font-size: 24px;
+	}
+
+	p {
+	  font-size: 14px;
+	}
+
+	ul {
+	  font-size: 18px;
+	  list-style-type: disc;
+	}
+
+	li {
+	  font-size: 14px;
+	}
+
+	/*
+	* Header and Footer content.
+	*/
+	header {
+	  display:block;
+		background-color:rgb(0,0,0);
+		width:100%;
+		position:fixed;
+		z-index:10;
+	}
+
+	nav {
+		padding-top: 50px;
+	}
+
+	footer {
+	  padding-top: 50px;
+	  display:block;
+		width:100%;
+		position: relative;
+		z-index:10;
+	}
+
+	#video {
+		width: 90%;
+	}
+
+	#logobutton {
+	  width: 32px;
+	  padding-right: 50px;
+	}
+
+	#logobuttonft {
+	  width: 128px;
+	}
+
+	.head-link {
+		display: block;
+		padding-top: 20px;
+		height: 100%;
+		width: 25%;
+		font-size: 16px;
+		float: left;
+		padding-right: 20px;
+		font-style: normal;
+		color: white;
+	}
+
+	/*
+	* Page content.
+	*/
+	#page-wrap {
+	  width: 100%;
+	  margin: 0 auto;
+	  overflow-x: hidden;
+	}
+
+	.left-dominant {
+		margin: auto;
+	  width: 90%;
+	}
+
+	.right-dominant {
+		margin: auto;
+	  width: 90%;
+	}
+
+	.left-equal {
+		margin: auto;
+	  width: 90%;
+	}
+
+	.right-equal {
+		margin: auto;
+	  width: 90%;
+	}
+
+	.left-submissive {
+		margin: auto;
+	  width: 90%;
+	}
+
+	.right-submissive {
+		margin: auto;
+	  width: 90%;
+	}
+
+	.page-element {
+	  padding-top: 50px;
+	  width: 100%;
+	}
+
+	#intro {
+	  padding-bottom: 50px;
+	}
+
+	#me {
+		display: block;
+		margin: auto;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		width: 50%;
+	}
+
+	#code-descript {
+	  padding-top: 48px;
+	}
+
+	#design {
+	  padding-top: 20%;
+	}
+
+	#port-video {
+		padding-top: 100px;
+		padding-bottom: 0px;
+	}
+
+	.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+	}
+	.videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+}
